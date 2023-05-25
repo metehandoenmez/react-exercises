@@ -20,6 +20,7 @@ Create a new react app
 Props - Passing `name` prop
 # Ex3 - 
 Props - Default value
+What happens if no name prop is passed to the Welcome component? Can you set a default value for the name prop?
 # Ex4 - 
 Props - Second prop
 # Ex5 - 
