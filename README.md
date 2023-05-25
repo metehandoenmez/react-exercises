@@ -18,6 +18,7 @@ React app will run on **localhost:3000**.
 Create a new react app
 # Ex2 - 
 Props - Passing `name` prop
+Create a Welcome class component that receives a name prop and renders the Welcome, {name}! message within a p tag. Render this component to you App component, passing it a name prop of your choosing.
 # Ex3 - 
 Props - Default value
 # Ex4 - 
