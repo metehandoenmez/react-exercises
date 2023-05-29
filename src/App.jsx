@@ -5,9 +5,11 @@ import Welcome from "./welcome.jsx";
 function App() {
   return (
     <div>
-      <Welcome name=""></Welcome>
+      <Welcome
+      name="Metehan"
+      age="24"
+      ></Welcome>
     </div>
-    /*When no name property is entered, the div is rendered as "Welcome," and a space. I have expected an "undefined" text after the "Welcome,"*/
   );
 }
 
