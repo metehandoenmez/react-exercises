@@ -2,9 +2,6 @@ function Age(props) {
     if (props.age > 18 && props.age < 65) {return (
         <span>Your age is {props.age || "unknown"}. </span>
     ) }
-    else {return (
-        <span>Your age ({props.age}) is not valid. </span>
-    ) }
 }
 
 
