@@ -24,9 +24,9 @@ Props - Default value
 Props - Second prop
 # Ex5 - 
 Props - JSX expression
-What happens if the name prop is a JSX expression instead of a string? How do you pass a prop that contains a JSX expression? Modify the value passed to the name prop so that it's contained within a strong tag.
 # Ex6 - 
 Props - Extract message
+Extract the "Your age is " message into a new component called Age and render it within the Welcome component. Pass to the Age component the age prop that Welcome is receiving from the App component.
 # Ex7 - 
 Conditional Rendering - If greater than `18`
 # Ex8 - 
