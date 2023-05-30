@@ -26,9 +26,9 @@ Props - Second prop
 Props - JSX expression
 # Ex6 - 
 Props - Extract message
-Extract the "Your age is " message into a new component called Age and render it within the Welcome component. Pass to the Age component the age prop that Welcome is receiving from the App component.
 # Ex7 - 
 Conditional Rendering - If greater than `18`
+Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18.
 # Ex8 - 
 Conditional Rendering - If prop is present
 # Ex9 - 

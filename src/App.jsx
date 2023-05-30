@@ -9,6 +9,11 @@ function App() {
       name="Metehan"
       age="24"
       ></Welcome>
+      <br />
+      <Welcome
+      name=""
+      age="17"
+      ></Welcome>
     </div>
   );
 }
