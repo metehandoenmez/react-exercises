@@ -32,9 +32,9 @@ Conditional Rendering - If greater than `18`
 Conditional Rendering - If prop is present
 # Ex9 - 
 Conditional Rendering - If less than `65`
-Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18 and less than 65.
 # Ex10 - 
 Conditional Rendering - If is equal to "John"
+Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18 and less than 65 and the name prop is equal to "John".
 # Ex11 - 
 Conditional Rendering - Render the "You are very young!"
 # Ex12 - 
