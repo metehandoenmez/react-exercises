@@ -30,9 +30,9 @@ Props - Extract message
 Conditional Rendering - If greater than `18`
 # Ex8 - 
 Conditional Rendering - If prop is present
-Modify the Welcome component so that the Age component is rendered only if the age prop is present.
 # Ex9 - 
 Conditional Rendering - If less than `65`
+Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18 and less than 65.
 # Ex10 - 
 Conditional Rendering - If is equal to "John"
 # Ex11 - 

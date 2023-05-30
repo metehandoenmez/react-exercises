@@ -1,7 +1,10 @@
 function Age(props) {
-    if (props.age) {return (
-        <span>Your age is {props.age}. </span>
-    )}
+    if (props.age > 18 && props.age < 65) {return (
+        <span>Your age is {props.age || "unknown"}. </span>
+    ) }
+    else {return (
+        <span>Your age ({props.age}) is not valid. </span>
+    ) }
 }
 
 
@@ -15,14 +18,11 @@ export default function Welcome(props) {
     );
 }
 
-
-/*or
- export default function Welcome(props) {
+/*or export default function Welcome(props) {
     return (
         <p>Welcome, <strong>{props.name || "User"}</strong>!
         <br />
-        {props.age && <Age age={props.age} />}
+        {(props.age > 18 && props.age < 65) && <Age age={props.age} />}
         </p>
     );
-}
-*/
+} */
