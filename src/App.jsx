@@ -12,7 +12,7 @@ function App() {
       <br />
       <Welcome
       name=""
-      age="17"
+      age=""
       ></Welcome>
     </div>
   );
