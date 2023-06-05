@@ -6,10 +6,7 @@ export default class Counter extends React.Component {
     state = {
         count: this.props.count,
     }
-
-    constructor(props) {
-        super(props);
-
+    componentDidMount() {
         let id = setInterval(() => {
             this.setState((state) => {
                 return {
@@ -17,6 +14,10 @@ export default class Counter extends React.Component {
                 };
             });
         }, this.props.incrementInterval);
+      }
+    
+    componentWillUnmount() {
+      clearInterval(this.id);
     }
 
     render() {
@@ -27,5 +28,3 @@ export default class Counter extends React.Component {
         );
     }
 }
-
-    

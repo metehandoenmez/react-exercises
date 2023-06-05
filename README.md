@@ -41,9 +41,9 @@ Conditional Rendering - Render the "You are very young!"
 State - Counter props
 # Ex14 - 
 State - 'CounterDisplay' component
-Extract the h1 tag showing the count state variable into a new component called CounterDisplay and render it within the Counter component, passing it the count state variable as a prop.
 # Ex15 - 
 Component Lifecycle - ComponentDidMount
+Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required?
 # Ex16 - 
 Events - ClickCounter
 # Ex17 - 
