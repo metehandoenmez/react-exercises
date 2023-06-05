@@ -43,9 +43,9 @@ State - Counter props
 State - 'CounterDisplay' component
 # Ex15 - 
 Component Lifecycle - ComponentDidMount
-Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required?
 # Ex16 - 
 Events - ClickCounter
+Create a ClickCounter class component that increments a counter every time a user clicks on a button. Render both the current value of the counter and the button within the ClickCounter component.
 # Ex17 - 
 Events - ClickTracker
 # Ex18 - 

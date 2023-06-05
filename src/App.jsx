@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-import Counter from "./counter.jsx";
+import ClickCounter from "./ClickCounter";
 
 function App() {
   return (
     <div>
-      <Counter
+      <ClickCounter
       count={0}
       incrementInterval={1000}
       incrementAmount={1}
-      ></Counter>
+      ></ClickCounter>
     </div>
   );
 }
