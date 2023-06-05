@@ -5,7 +5,6 @@ export default class ClickCounter extends React.Component {
     state = {
         count: 0,
     }
-   clickFnc
     
 
     render() {
