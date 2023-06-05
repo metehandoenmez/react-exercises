@@ -39,9 +39,9 @@ Conditional Rendering - Render the "You are very young!"
 # Ex12 - 
 # Ex13 - 
 State - Counter props
-Modify the Counter component so that the initial value of the counter, the increment interval and the increment amount are passed as props to the component
 # Ex14 - 
 State - 'CounterDisplay' component
+Extract the h1 tag showing the count state variable into a new component called CounterDisplay and render it within the Counter component, passing it the count state variable as a prop.
 # Ex15 - 
 Component Lifecycle - ComponentDidMount
 # Ex16 - 
