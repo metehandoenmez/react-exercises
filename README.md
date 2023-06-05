@@ -37,10 +37,9 @@ Conditional Rendering - If is equal to "John"
 # Ex11 - 
 Conditional Rendering - Render the "You are very young!"
 # Ex12 - 
-State - Create a `Counter` class component
-Create a Counter class component with an internal state containing a count property, initialized to 0. The Counter component should render the count property within an h1 tag, and the count property should be incremented by 1 every second;
 # Ex13 - 
 State - Counter props
+Modify the Counter component so that the initial value of the counter, the increment interval and the increment amount are passed as props to the component
 # Ex14 - 
 State - 'CounterDisplay' component
 # Ex15 - 

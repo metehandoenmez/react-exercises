@@ -7,6 +7,8 @@ function App() {
     <div>
       <Counter
       count={0}
+      incrementInterval={1000}
+      incrementAmount={1}
       ></Counter>
     </div>
   );
