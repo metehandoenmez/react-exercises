@@ -36,9 +36,9 @@ Conditional Rendering - If less than `65`
 Conditional Rendering - If is equal to "John"
 # Ex11 - 
 Conditional Rendering - Render the "You are very young!"
-Modify the Age component so that the "Your age is " message is rendered only if the age prop is greater than 18. Otherwise render the "You are very young!" message.
 # Ex12 - 
 State - Create a `Counter` class component
+Create a Counter class component with an internal state containing a count property, initialized to 0. The Counter component should render the count property within an h1 tag, and the count property should be incremented by 1 every second;
 # Ex13 - 
 State - Counter props
 # Ex14 - 

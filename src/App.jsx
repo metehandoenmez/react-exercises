@@ -1,24 +1,13 @@
 import React from "react";
 import "./App.css";
-import Welcome from "./welcome.jsx";
+import Counter from "./counter.jsx";
 
 function App() {
   return (
     <div>
-      <Welcome
-      name="Metehan"
-      age="24"
-      ></Welcome>
-      <br />
-      <Welcome
-      name=""
-      age="16"
-      ></Welcome>
-      <br />
-      <Welcome
-      name="John"
-      age="19"
-      ></Welcome>
+      <Counter
+      count={0}
+      ></Counter>
     </div>
   );
 }
