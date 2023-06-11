@@ -22,6 +22,13 @@ export default class Login extends Component {
             const { username, password } = this.state;
             onLogin({ username, password });
       }
+    
+    handleFormReset = () => {
+        this.setState({
+            username: "",
+            password: ""
+        })
+    }
 
 
     render() {
@@ -45,6 +52,9 @@ export default class Login extends Component {
                     disabled={this.state.username === "" || this.state.password === ""}
                     onClick={this.handleLogin}
                 >Login</button>
+                <button onClick={this.handleFormReset}>
+                    Reset
+                </button>
             </div>
         )
     }
