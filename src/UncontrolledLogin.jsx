@@ -6,6 +6,9 @@ export default class UncontrolledLogin extends React.Component {
     usernameRef = createRef()
     passwordRef = createRef()
 
+    componentDidMount() {
+        this.usernameRef.current.focus()
+    }
 
     handleFormSubmit = (event) => {
         event.preventDefault();

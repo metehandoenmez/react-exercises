@@ -49,15 +49,16 @@ Events - ClickCounter
 Events - ClickTracker
 # Ex18 - 
 Forms - InteractiveWelcome component
-Create an InteractiveWelcome component that renders an input tag and the Welcome component. Pass the current content of the input tag to the name prop of the Welcome component. The input tag should be a controlled component.
 # Ex19 - 
 Forms - Add "login" `button`
 # Ex20 - 
 Forms - Add a "reset" `button`
 # Ex21 - 
 Forms - `UncontrolledLogin` component
+
 # Ex22 - 
 Forms - Automatic focus
+Modify the UncontrolledLogin component so that the username input is automatically focused when the component renders the first time.
 # Ex23 - 
 Lists - Create a `TodoList` component
 # Ex24 - 
