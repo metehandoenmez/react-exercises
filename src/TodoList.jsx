@@ -10,6 +10,7 @@ export default class TodoList extends React.Component {
     handleItemPush = () => {
         this.setState({
             items: [...this.state.items, this.state.input],
+            input: ""
         })
     }
 
