@@ -64,9 +64,9 @@ Lists - Create a `TodoList` component
 Lists - Add Todo
 # Ex25 - 
 Lists - Add a "reset" `button`
-Modify the TodoList by adding a "reset" button that clears the items array when clicked.
 # Ex26 - 
 Lists - Add a "remove" `button`
+Modify the TodoList by adding a "remove" button to each li tag. When clicked, the event handler should remove corresponding item from the items array.
 # Ex27 - 
 Render Props - Modify the `TodoList` component
 # Ex28 - 
