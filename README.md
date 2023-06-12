@@ -58,9 +58,9 @@ Forms - `UncontrolledLogin` component
 
 # Ex22 - 
 Forms - Automatic focus
-Modify the UncontrolledLogin component so that the username input is automatically focused when the component renders the first time.
 # Ex23 - 
 Lists - Create a `TodoList` component
+Create a TodoList component that renders a ul tag with a li tag for each item contained in the items state variable. The items state variable should be an array of strings. The TodoList component should also contain an input tag and a button. When the button is clicked, the event handler should add the value of the input tag to the items array.
 # Ex24 - 
 Lists - Add Todo
 # Ex25 - 
