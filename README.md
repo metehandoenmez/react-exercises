@@ -62,9 +62,9 @@ Forms - Automatic focus
 Lists - Create a `TodoList` component
 # Ex24 - 
 Lists - Add Todo
-Modify the TodoList component so that the input clears every time a Todo is added to the items array.
 # Ex25 - 
 Lists - Add a "reset" `button`
+Modify the TodoList by adding a "reset" button that clears the items array when clicked.
 # Ex26 - 
 Lists - Add a "remove" `button`
 # Ex27 - 
