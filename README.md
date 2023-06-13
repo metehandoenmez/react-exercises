@@ -66,9 +66,9 @@ Lists - Add Todo
 Lists - Add a "reset" `button`
 # Ex26 - 
 Lists - Add a "remove" `button`
-Modify the TodoList by adding a "remove" button to each li tag. When clicked, the event handler should remove corresponding item from the items array.
 # Ex27 - 
 Render Props - Modify the `TodoList` component
+Modify the TodoList component so that, instead of rendering the items array within the ul tag, it calls the function passed to its render prop, passing it the items array as a parameter, as well as the function required to delete the item. Pass a render prop to the TodoList component to correctly render and interact with the items array.
 # Ex28 - 
 Cont# Ext - Create a `LanguageCont# Ext`
 # Ex29 - 

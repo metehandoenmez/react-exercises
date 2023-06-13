@@ -1,17 +1,21 @@
 import React from "react";
-import "./App.css";
-
 import TodoList from "./TodoList";
 
-function App() {
-
-
+export default function App() {
+  const todoList = (items, handleRemove) => (
+    <ul>
+      {items.map((item, index) => (
+        <li key={item + index}>
+          {item}
+          <button onClick={() => handleRemove(index)}>Remove</button>
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <div>
-      <TodoList/>
+      <TodoList render={todoList} />
     </div>
   );
 }
-
-export default App;
