@@ -24,15 +24,15 @@ strings = {
 
     render() {
         return (
-            <LanguageContext>
+            <LanguageContext.Consumer>
         {language => {
             return (
           <div>
-            <div>{this.strings[language].SELECTED_LANGUAGE} {this.strings[language].LANGUAGE}</div>
+            <div>{this.strings[language].SELECTED_LANGUAGE} <h1><i>{this.strings[language].LANGUAGE}</i></h1></div>
             <label>{this.strings[language].SELECT_LANGUAGE} </label>
           </div>
         )}}
-      </LanguageContext>
+      </LanguageContext.Consumer>
           );
     }
 }

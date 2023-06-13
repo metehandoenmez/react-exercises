@@ -25,3 +25,22 @@ button {
 .blueDiv {
   background-color: blue;
 }
+
+.container {
+  height: 100%;
+  width: 300px;
+  text-align: center;
+  padding: 50px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid orange;
+  border-radius: 16px;
+}
+
+.selector{
+  padding: 10px;
+  border: 2px solid orange;
+  border-radius: 16px;
+}
