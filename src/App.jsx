@@ -1,21 +1,31 @@
 import React from "react";
-import TodoList from "./TodoList";
+import DisplayLanguage from "./DisplayLanguage";
+import {LanguageContext} from "./LanguageContext";
 
-export default function App() {
-  const todoList = (items, handleRemove) => (
-    <ul>
-      {items.map((item, index) => (
-        <li key={item + index}>
-          {item}
-          <button onClick={() => handleRemove(index)}>Remove</button>
-        </li>
-      ))}
-    </ul>
-  );
-
-  return (
-    <div>
-      <TodoList render={todoList} />
-    </div>
-  );
-}
+export default class App extends React.Component {
+  state= {
+    language: "en"
+  }
+  
+  handleLanguageChange = (event) => {
+    this.setState({
+      language: event.target.value
+    })
+  }
+  
+  render() {
+    return (
+      
+      <div>
+        <LanguageContext.Provider value={this.state.language}>
+        <DisplayLanguage/>
+        
+        <select value={this.state.language} onChange={this.handleLanguageChange}>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+          <option value="de">German</option>
+        </select>
+        </LanguageContext.Provider>
+        </div>
+    )
+  }}

@@ -68,9 +68,9 @@ Lists - Add a "reset" `button`
 Lists - Add a "remove" `button`
 # Ex27 - 
 Render Props - Modify the `TodoList` component
-Modify the TodoList component so that, instead of rendering the items array within the ul tag, it calls the function passed to its render prop, passing it the items array as a parameter, as well as the function required to delete the item. Pass a render prop to the TodoList component to correctly render and interact with the items array.
 # Ex28 - 
 Cont# Ext - Create a `LanguageCont# Ext`
+Create a LanguageContext and wrap a DisplayLanguage component within its provider. Add a select tag to the component containing the DisplayLanguage component that allows the user to select the language, and pass it as a value to the Provider.
 # Ex29 - 
 Cont# Ext - Consume the `LanguageCont# Ext`
 # Ex30 - 
