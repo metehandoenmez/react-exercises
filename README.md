@@ -74,9 +74,9 @@ Cont# Ext - Create a `LanguageCont# Ext`
 Cont# Ext - Consume the `LanguageCont# Ext`
 # Ex30 - 
 useState - `ClickCounter` as a function component
-Rewrite the ClickCounter component as a function component, and use the useState hook to track the state of the counter.
 # Ex31 - 
 useState - `Login` as a function component
+Rewrite the Login component as a function component, and use the useState hook to track the state of the username, password and remember inputs. Tip: you can use useState more than once.
 # Ex32 - 
 useEffect - Add a side effect to the `ClickCounter`
 # Ex33 - 

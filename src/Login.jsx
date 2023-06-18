@@ -1,61 +1,72 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-export default class Login extends Component {
+export default function Login(props) {
     
-    state = {
-        username: "",
-        password: "",
-    }
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+    const [remember, setRemember] = useState(false)
+
+
     
     
-    handleInput = (event) => {
+    const handleInput = (event) => {
 
         const name = event.target.name;
-        this.setState({
-            [name]: event.target.value,
-        });
-        console.log(this.state)
+
+        if(name === "username") {
+            setUsername(event.target.value)
+        }
+        else if(name === "password") {
+            setPassword(event.target.value)
+        }
+        else if(name === "remember"){
+            setRemember(!remember)
+        }
     }
 
-    handleLogin = () => {
-            const { onLogin } = this.props;
-            const { username, password } = this.state;
-            onLogin({ username, password });
+    const handleLogin = () => {
+            const { onLogin } = props;
+            onLogin({ username, password, remember})
       }
     
-    handleFormReset = () => {
-        this.setState({
-            username: "",
-            password: ""
-        })
+    const handleFormReset = () => {
+        setUsername("");
+        setPassword("")
+        setRemember(false)
     }
 
 
-    render() {
         return (
             <div>
+                <h2><i>Login Form</i></h2> <br />
                 <input
                     type="text"
                     name="username"
-                    value={this.state.username}
-                    onChange={this.handleInput}
+                    value={username}
+                    onChange={handleInput}
                     placeholder="Username"
                 />
                 <input
                     type="password"
                     name="password"
-                    value={this.state.password}
-                    onChange={this.handleInput}
+                    value={password}
+                    onChange={handleInput}
                     placeholder="Password"
                 />
+                <br /> <br /> Remember?
+                <input
+                type="checkbox"
+                name="remember"
+                onChange={handleInput}
+                checked={remember}
+                /> <br /> <br />
                 <button
-                    disabled={this.state.username === "" || this.state.password === ""}
-                    onClick={this.handleLogin}
+                    disabled={username === "" || password === ""}
+                    onClick={handleLogin}
                 >Login</button>
-                <button onClick={this.handleFormReset}>
+                <button onClick={handleFormReset}>
                     Reset
                 </button>
             </div>
         )
-    }
 }
