@@ -1,30 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CounterDisplay from "./CounterDisplay"
+import "./App.css"
 
 
-export default class Counter extends React.Component {
-    state = {
-        count: this.props.count,
-    }
-    componentDidMount() {
-        let id = setInterval(() => {
-            this.setState((state) => {
-                return {
-                    count: state.count + this.props.incrementAmount,
-                };
-            });
-        }, this.props.incrementInterval);
-      }
+export default function Counter() {
+    const [count, setCount] = useState(0)
+    const [isHidden, setIsHidden] = useState(false)
+ 
     
-    componentWillUnmount() {
-      clearInterval(this.id);
-    }
+    
+    useEffect(() => {
 
-    render() {
+        console.log("Component mounted.")
+
+        const intervalId = setInterval(() => {
+            setCount(count => count + 1)
+        }, 1000);
+
+        return () => {
+            clearInterval(intervalId);
+            console.log("Component unmounted.")
+        }
+    },[])
+    
+
+         const handleHidden = () => {
+            setIsHidden(!isHidden)
+         }
+
+
         return (
             <div>
-                <CounterDisplay count={this.state.count} />
+                {!isHidden ? (
+                    <CounterDisplay name="display" count={count} />
+                )
+                    :
+                (
+                    <p>The counter is hidden.</p>
+                    
+                ) }
+                <br />
+                <button  onClick={handleHidden}>{!isHidden ? "Hide" : "Show"}</button>
             </div>
         );
-    }
 }
