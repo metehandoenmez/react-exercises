@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css"
-import CustomForm from "./CustomForm";
+import GithubUserList from "./GithubUserList";
 
 export default class App extends React.Component {
 
@@ -8,8 +8,8 @@ export default class App extends React.Component {
   render() {
     return (
       
-      <div className="container">
-      <CustomForm />
+      <div>
+      <GithubUserList />
         </div>
     )
   }}

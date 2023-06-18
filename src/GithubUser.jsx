@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./App.css"
 
 
-export default function GithubUser({username}) {
- 
+
+const useGithubUser = (username) => {
     const [dataObj, setDataObj] = useState([])
+
     
     useEffect(() => {
         fetch(`https://api.github.com/users/${username}`)
@@ -13,7 +14,15 @@ export default function GithubUser({username}) {
             .then(data => 
                 setDataObj(data))
     }, [username])
-    
+
+    return { dataObj }
+
+}
+
+export default function GithubUser({username}) {
+ 
+    const {dataObj} = useGithubUser(username)
+
     const imgStyle = {
         borderRadius: "50%",
         padding: "10px",
