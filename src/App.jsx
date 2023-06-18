@@ -1,28 +1,22 @@
 import React from "react";
 import "./App.css"
-import Login from "./Login";
+import ClickCounter from "./ClickCounter";
 
 export default class App extends React.Component {
 
-  loginFunc = (userdata) => {
-    console.log("Logging in...");
-    console.log("Username:" + userdata.username)
-    console.log("Password:" + userdata.password)
-    if(userdata.remember) {
-      console.log("User data will be remembered.")
+  counterChange = (data) => {
+    if(data.count%2===0) {
+      console.log(`The count is EVEN now, ${data.count}.`)
     }
-    else if(!userdata.remember) {
-      console.log("User data will not be remembered.")
+    else if(data.count%2===1) {
+      console.log(`The count is ODD now, ${data.count}.`)
     }
-  };
-
-
-  
+  }
   render() {
     return (
       
       <div className="container">
-      <Login onLogin={this.loginFunc}/>
+      <ClickCounter onCounterChange={this.counterChange} />
         </div>
     )
   }}
