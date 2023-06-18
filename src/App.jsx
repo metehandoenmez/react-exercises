@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css"
-import GithubUser from "./GithubUser";
+import GithubUserList from "./GithubUserList";
 
 export default class App extends React.Component {
 
@@ -8,8 +8,8 @@ export default class App extends React.Component {
   render() {
     return (
       
-      <div className="container">
-      <GithubUser username="metehandoenmez" />
+      <div>
+      <GithubUserList />
         </div>
     )
   }}

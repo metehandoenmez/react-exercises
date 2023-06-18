@@ -23,11 +23,11 @@ export default function GithubUser({username}) {
 
 
                 if(dataObj.message === "Not Found") {
-                   return (<div><h2>User not found.</h2></div>) 
+                   return (<div className="container"><h2>User not found.</h2></div>) 
                 }
                 else {
                     return (
-                        <div>
+                        <div className="container">
                         <img src={dataObj.avatar_url} alt="" style={imgStyle}></img>
                         <p><h4><u>Username</u></h4> {dataObj.login}</p>
                         <br />
