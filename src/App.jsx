@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css"
-import GithubUserList from "./GithubUserList";
+import CustomCounter from "./CustomCounter";
 
 export default class App extends React.Component {
 
@@ -8,8 +8,8 @@ export default class App extends React.Component {
   render() {
     return (
       
-      <div>
-      <GithubUserList />
+      <div className="container">
+      <CustomCounter />
         </div>
     )
   }}
