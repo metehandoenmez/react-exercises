@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css"
-import GithubUserList from "./GithubUserList";
+import CardDetails from "./CardDetails";
 
 export default class App extends React.Component {
 
@@ -9,7 +9,7 @@ export default class App extends React.Component {
     return (
       
       <div>
-      <GithubUserList />
+      <CardDetails initialData={{model:"Tesla Model S",year:"2023",color:"Red"}} />
         </div>
     )
   }}
