@@ -1,23 +1,24 @@
 import React from "react";
 import "./App.css"
 import FilteredList from "./FilteredList";
+import {Routes, Route, Link} from "react-router-dom"
+import Counter from "./counter"
+import InteractiveWelcome from "./InteractiveWelcome";
 
-export default class App extends React.Component {
+export default function App() {
 
-  list = [
-    { id: 1, name: "Jean", age: 22 },
-    { id: 2, name: "Emma", age: 28 },
-    { id: 3, name: "Lukas", age: 15 },
-    { id: 4, name: "Ayşe", age: 26 },
-    { id: 5, name: "Sophie", age: 23 },
-    { id: 6, name: "Max", age: 31 },
-  ];
- 
-  render() {
     return (
       
-      <div className="container">
-      <FilteredList list={this.list}/>
+      <div>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<InteractiveWelcome />}></Route>
+            <Route path="/counter" element={<Counter></Counter>}></Route>
+          </Routes>
         </div>
+        <div className="container">
+          <Link to={"/counter"}>Counter</Link>
+        </div>
+      </div>
     )
-  }}
+  }
