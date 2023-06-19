@@ -9,6 +9,7 @@ export default class App extends React.Component {
     return (
       
       <div>
+        <div style={{display:"flex",alignItems:"center",color:"white"}}><img src="githubicon.png" alt="" style={{width:"120px"}} /><h1>GitHub Mini    Check</h1></div>
       <GithubUserList />
         </div>
     )
