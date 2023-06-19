@@ -1,15 +1,29 @@
 import React from "react";
-import "./App.css"
-import CardDetails from "./CardDetails";
+import DisplayLanguage from "./DisplayLanguage";
+import {LanguageContext} from "./LanguageContext";
 
-export default class App extends React.Component {
+export default function App() {
 
- 
-  render() {
-    return (
-      
-      <div>
-      <CardDetails initialData={{model:"Tesla Model S",year:"2023",color:"Red"}} />
-        </div>
-    )
-  }}
+  const [language, setLanguage] = React.useState("en");
+  
+   const handleLanguageChange = (event) => {
+    setLanguage(event.target.value);
+  };
+  
+  return (
+    <div>
+      <LanguageContext.Provider value={language}>
+        <DisplayLanguage />
+
+        <select value={language} onChange={handleLanguageChange}>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+          <option value="de">Deutch</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="tr">Türkçe</option>
+        </select>
+      </LanguageContext.Provider>
+    </div>
+  );
+};

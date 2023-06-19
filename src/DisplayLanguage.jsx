@@ -1,38 +1,50 @@
-import React from "react";
+import React, {useContext} from "react";
 import { LanguageContext } from "./LanguageContext";
 
-export default class DisplayLanguage extends React.Component {
+export default function DisplayLanguage() {
 
+    const language = useContext(LanguageContext);
 
-strings = {
-    en: {
-        LANGUAGE: "English",
-        SELECT_LANGUAGE: "Select language: ",
-        SELECTED_LANGUAGE: "Selected language: ",
-    },
-    it: {
-        LANGUAGE: "Italiano",
-        SELECT_LANGUAGE: "Seleziona la lingua: ",
-        SELECTED_LANGUAGE: "Lingua selezionata: ",
-    },
-    de: {
-        LANGUAGE: "Deutsch",
-        SELECT_LANGUAGE: "Sprache auswählen: ",
-        SELECTED_LANGUAGE: "Ausgewählte Sprache: ",
+    const strings = {
+        en: {
+            LANGUAGE: "English",
+            SELECT_LANGUAGE: "Select language: ",
+            SELECTED_LANGUAGE: "Selected language: ",
+        },
+        it: {
+            LANGUAGE: "Italiano",
+            SELECT_LANGUAGE: "Seleziona la lingua: ",
+            SELECTED_LANGUAGE: "Lingua selezionata: ",
+        },
+        de: {
+            LANGUAGE: "Deutsch",
+            SELECT_LANGUAGE: "Sprache auswählen: ",
+            SELECTED_LANGUAGE: "Ausgewählte Sprache: ",
+        },
+        fr: {
+            LANGUAGE: "Français",
+            SELECT_LANGUAGE: "Sélectionner une langue : ",
+            SELECTED_LANGUAGE: "Langue sélectionnée : ",
+          },
+          es: {
+            LANGUAGE: "Español",
+            SELECT_LANGUAGE: "Seleccionar idioma: ",
+            SELECTED_LANGUAGE: "Idioma seleccionado: ",
+          },
+          tr: {
+            LANGUAGE: "Türkçe",
+            SELECT_LANGUAGE: "Dil seç: ",
+            SELECTED_LANGUAGE: "Seçilen Dil: ",
+          },
+
     }
-}
 
-    render() {
-        return (
-            <LanguageContext.Consumer>
-        {language => {
-            return (
+    return (
+        <div>
           <div>
-            <div>{this.strings[language].SELECTED_LANGUAGE} <h1><i>{this.strings[language].LANGUAGE}</i></h1></div>
-            <label>{this.strings[language].SELECT_LANGUAGE} </label>
+            {strings[language].SELECTED_LANGUAGE} {strings[language].LANGUAGE}
           </div>
-        )}}
-      </LanguageContext.Consumer>
-          );
-    }
-}
+          <label>{strings[language].SELECT_LANGUAGE}</label>
+        </div>
+    );
+};
