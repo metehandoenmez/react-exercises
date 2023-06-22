@@ -27,7 +27,7 @@ export default function GithubUser({username}) {
                 }
                 else {
                     return (
-                        <div className="container">
+                        <div>
                         <img src={dataObj.avatar_url} alt="" style={imgStyle}></img>
                         <p><h4><u>Username</u></h4> {dataObj.login}</p>
                         <br />
