@@ -7,18 +7,21 @@ const fetcher = (url) => fetch(url).then((response) => response.json());
 const useGithubUser = (username) => {
   const shouldFetch = !(username === null);
 
-  const { data: dataObj, error } = useSWR(
+  const { data: dataObj, error, mutate } = useSWR(
     shouldFetch ? `https://api.github.com/users/${username}` : null,
     fetcher
   );
 
   const loading = shouldFetch && !dataObj && !error;
 
-  return { dataObj, error, loading };
+  const refetchData = () => {
+        mutate();   
+  }
+  return { dataObj, error, loading, refetchData };
 };
 
 export default function GithubUser({ username }) {
-  const { dataObj, error, loading } = useGithubUser(username);
+  const { dataObj, error, loading, refetchData } = useGithubUser(username);
 
   const imgStyle = {
     borderRadius: "50%",
@@ -82,6 +85,7 @@ export default function GithubUser({ username }) {
       <a href={dataObj.html_url}>
         <button>View on GitHub</button>
       </a>
+      <button onClick={refetchData}>Refetch Data</button>
     </div>
   );
 }
