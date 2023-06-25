@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import useSWR from "swr";
 import "./App.css";
 
 const fetcher = (url) => fetch(url).then((response) => response.json());
 
 const useGithubUser = (username) => {
-  const { data: dataObj, error } = useSWR(`https://api.github.com/users/${username}`, fetcher);
+  const shouldFetch = !(username === null);
 
-  const loading = !dataObj && !error;
+  const { data: dataObj, error } = useSWR(
+    shouldFetch ? `https://api.github.com/users/${username}` : null,
+    fetcher
+  );
+
+  const loading = shouldFetch && !dataObj && !error;
 
   return { dataObj, error, loading };
 };
@@ -21,6 +26,10 @@ export default function GithubUser({ username }) {
     width: "180px",
   };
 
+  if (username === null) {
+    return <div className="container">Provide a username</div>;
+  }
+
   if (loading) {
     return <div className="container">Loading...</div>;
   }
@@ -33,46 +42,46 @@ export default function GithubUser({ username }) {
     );
   }
 
-  if (dataObj.message === "Not Found") {
+  if (dataObj && dataObj.message === "Not Found") {
     return (
       <div className="container">
         <h2>User not found.</h2>
       </div>
     );
-  } else {
-    return (
-      <div className="container">
-        <img src={dataObj.avatar_url} alt="" style={imgStyle}></img>
-        <p>
-          <h4>
-            <u>Username</u>
-          </h4>{" "}
-          {dataObj.login}
-        </p>
-        <br />
-        <p>
-          <h4>
-            <u>Location</u>
-          </h4>{" "}
-          {dataObj.location}
-        </p>
-        <br />
-        <p>
-          <b>Followers</b>: {dataObj.followers}, <b>Following</b>:{" "}
-          {dataObj.following}
-        </p>
-        <br />
-        <p>
-          <h4>
-            <u>Public Repositories</u>
-          </h4>{" "}
-          {dataObj.public_repos}
-        </p>
-        <br />
-        <a href={dataObj.html_url}>
-          <button>View on GitHub</button>
-        </a>
-      </div>
-    );
   }
+
+  return (
+    <div className="container">
+      <img src={dataObj.avatar_url} alt="" style={imgStyle} />
+      <p>
+        <h4>
+          <u>Username</u>
+        </h4>{" "}
+        {dataObj.login}
+      </p>
+      <br />
+      <p>
+        <h4>
+          <u>Location</u>
+        </h4>{" "}
+        {dataObj.location}
+      </p>
+      <br />
+      <p>
+        <b>Followers</b>: {dataObj.followers}, <b>Following</b>:{" "}
+        {dataObj.following}
+      </p>
+      <br />
+      <p>
+        <h4>
+          <u>Public Repositories</u>
+        </h4>{" "}
+        {dataObj.public_repos}
+      </p>
+      <br />
+      <a href={dataObj.html_url}>
+        <button>View on GitHub</button>
+      </a>
+    </div>
+  );
 }
